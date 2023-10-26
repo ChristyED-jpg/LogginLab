@@ -23,7 +23,7 @@ public class LogginLabTest {
 
         for (Integer i = 1; i <= finalLimit; i++) {
             if (lab.thresholdExceeds(i)) {
-                logger.log(Level.INFO, "Threshold not reached! It is "+i);
+                logger.log(Level.INFO, "Threshold not reached! It is " + i);
                 assertTrue(lab.thresholdExceeds(i));
             } else {
                 logger.log(Level.INFO, "Threshold finally reached!");
@@ -31,4 +31,27 @@ public class LogginLabTest {
             }
         }
     }
+
+    public void thresholdReach() {
+        Integer deadEnd = 10;
+        LogginLab lab = new LogginLab();
+
+        for (int i = 1; i < 10; i++) {
+            if (lab.thresholdReached(deadEnd) == true) {
+                logger.log(Level.INFO, "Threshold not reached! It is " + i);
+                assertTrue(lab.thresholdExceeds(i));
+            }
+
+        }
+
+
+    }
+
 }
+
+
+
+
+
+
+
