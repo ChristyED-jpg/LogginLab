@@ -29,10 +29,12 @@ public class LogginLab {
     }
 
     public boolean thresholdExceeds(Integer limit) {
-        if (this.threshold > limit) 
-          return true;
-        else
+        if (this.threshold > limit){
+            return true;
+
+        }else {
             return false;
+        }
 
     }
 
@@ -42,7 +44,7 @@ public class LogginLab {
 
 
     public boolean thresholdReached(Integer limit) {
-        if (limit > this.threshold) {
+        if (limit >= this.threshold) {
             return true;
         } else {
             return false;
